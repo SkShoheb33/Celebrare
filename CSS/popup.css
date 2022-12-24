@@ -1,0 +1,84 @@
+#popup {
+    position: absolute;
+    z-index: 10;
+    bottom: 10vh;
+    left: 40vw;
+    border: 2px solid green;
+    border-radius: 20px;
+    width: 25vw;
+    height: 75vh;
+    visibility: hidden;
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+}
+
+.styles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+#pic1 {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.text,
+.image {
+    font-size: 20px;
+    text-align: center;
+}
+
+.styles img {
+    border-radius: 5px;
+    margin: 3px;
+    padding: 2px;
+    width: 2.5vw;
+    height: 5vh;
+}
+
+.styles #original {
+    border-radius: 5px;
+    margin: 3px;
+    padding: 3px;
+    width: 5.5vw;
+    height: 5vh;
+    border: 1px solid black;
+}
+
+#btn {
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+#cancle button {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    #popup {
+        width: 70vw;
+        top: 5vh;
+        height: 90vh;
+        left: 15vw;
+    }
+    #pic1 {
+        width: 200px;
+        height: 200px;
+    }
+    .styles {
+        flex-direction: column;
+    }
+    .styles div {
+        text-align: center;
+    }
+    .styles img {
+        width: 25px;
+    }
+    .styles #original {
+        width: 75px;
+    }
+}

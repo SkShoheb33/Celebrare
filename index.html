@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JS/splash.js"></script>
+    <script src="JS/image.js"></script>
+    <script src="JS/popup.js"></script>
+    <script src="JS/shapes.js"></script>
+    <link rel="stylesheet" href="CSS/splash.css">
+    <link rel="stylesheet" href="CSS/input.css">
+    <link rel="stylesheet" href="CSS/output.css">
+    <link rel="stylesheet" href="CSS/popup.css">
+    <link rel="stylesheet" href="CSS/shapes.css">
+    <title>Make you photo</title>
+</head>
+
+<body>
+    <div id="splash">
+        <div>
+            <img src="Assets/splash.png" alt="" class="welcome">
+        </div>
+    </div>
+    <div id="main" style="display: none;">
+        <div class="top">
+            <img src="Assets/splash.png" alt="" class="navlogo">
+        </div>
+        <div class="input">
+            <div class="container">
+                <div class="text">
+                    Upload Image
+                </div>
+                <div class="button">
+                    <input type="file" name="image" accept="image/*" id="file" onchange="loadImage(event)" onclick="popup()" style="display: none;">
+                    <button><label for="file">Choose from device</label></button>
+                </div>
+            </div>
+        </div>
+        <div id="popup">
+            <div id="cancle">
+                <button id="cncl" onclick="popdown()">X</button>
+            </div>
+            <div class="text">
+                Uploaded Image
+            </div>
+            <div class="image" id="image1"><img src="" width="100%" alt="Insert photo" id="pic1"></div>
+            <div class="styles">
+                <div id="original" onclick="changeToOriginal()">original</div>
+                <div id="heart" onclick="changeToHeart()"><img src="Assets/user_image_frame_1.png" alt=""></div>
+                <div id="square" onclick="changeToSquare()"><img src="Assets/user_image_frame_2.png" alt=""></div>
+                <div id="circle" onclick="changeToCircle()"><img src="Assets/user_image_frame_3.png" alt=""></div>
+                <div id="rectangle" onclick="changeToRectangle()"><img src="Assets/user_image_frame_4.png" alt=""></div>
+            </div>
+            <div id="btn"><button id="use" onclick="output()">Use this image</button></div>
+        </div>
+        <div id="output">
+            <img src="" alt="Insert photo" width="100%" id="pic">
+        </div>
+    </div>
+</body>
+
+</html>

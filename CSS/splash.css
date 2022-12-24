@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#splash {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.welcome {
+    position: absolute;
+    top: 40vh;
+    left: 28vw;
+    animation: opa 2.5s linear infinite;
+}
+
+.main {
+    position: relative;
+}
+
+.navlogo {
+    position: relative;
+    top: 0;
+    left: 28vw;
+    margin: auto;
+}
+
+@keyframes opa {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .welcome,
+    .navlogo {
+        width: 200px;
+    }
+}
